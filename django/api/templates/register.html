@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Авторизация{% endblock %}
+
+{% block form %}
+<div class="header">Регистрация</div>
+<form method="POST" name="form-auth">{% csrf_token %}
+    <table>{{ form.as_table }}</table>
+    <div class="actions_container">
+        <button type="submit">Зарегистрироваться</button>
+        <span>Уже есть аккаунт? <a href="/auth">Войти</a></span>
+    </div>
+</form>
+{% endblock %}

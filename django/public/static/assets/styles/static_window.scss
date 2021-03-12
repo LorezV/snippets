@@ -1,0 +1,99 @@
+.static_window {
+    margin: 12px 12px 12px 12px;
+    padding: 12px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+.static_window .info {
+    display: flex;
+}
+
+.static_window .info .info__text {
+    margin-left: 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.static_window .info .info__text .user_name {
+    font-size: 19px;
+}
+
+.static_window .info .info__text .user_status {
+    font-size: 14px;
+    margin-left: 5px;
+    color: $ligth-color;
+    width: 100%;
+}
+
+.static_window .info .info__text .user_status:hover {
+    background-color: #0000000F;
+}
+
+.static_window .info .info__text .user_status.active {
+    color: $dark-color;
+    margin-left: 0px;
+}
+
+.static_window .info .info__text * {
+    margin-bottom: 6px;
+}
+
+.static_window .info .info__text *:last-child {
+    margin-bottom: 0px;
+}
+
+.static_window .info .info__text table {
+    font-size: 14px;
+}
+
+.static_window .info .info__text td:last-child {
+    color: $gray-color;
+}
+
+.static_window .avatar_wrapper .user_editprofile {
+    margin-top: 12px;
+}
+
+.static_window .info .info__text td:last-child {
+    text-align: end;
+}
+
+@media (max-width: 992px) {
+    .static_window {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.image-viewer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.image-viewer .close {
+    align-self: flex-end;
+    margin-right: 100px;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+}
+.image-viewer img {
+    max-width: auto;
+    max-height: 90%;
+}
